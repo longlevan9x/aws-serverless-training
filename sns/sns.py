@@ -11,7 +11,8 @@ def list_topics(index):
         publish(topic["TopicArn"], index)
 
 def publish(TopicArn, index):
-    Message = 'Hello from client %s' % index 
+    print("From %s", TopicArn)
+    Message = 'Hello from client %s' % (index) 
     response = client.publish(
         TopicArn=TopicArn,
         Message=Message,
