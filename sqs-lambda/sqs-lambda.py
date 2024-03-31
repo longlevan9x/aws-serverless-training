@@ -1,3 +1,4 @@
+# event brigde -> SNS -> SQS -> Lambda
 import json
 
 def lambda_handler(event, context):
@@ -13,11 +14,20 @@ def lambda_handler(event, context):
         body = json.loads(body)
 
     if body and type(body) is dict and body["Type"] == "Notification":
-        #for sns
         print("body sns", json.dumps(body))
-        Subject = body["Subject"]
+        Subject = ""
+        MessageAttributes = ""
+
+        if "Subject" in body:
+            #from sns
+            Subject = body["Subject"]
+        # else:
+            #from event brigde
+
+        if "MessageAttributes" in body:
+            MessageAttributes = body["MessageAttributes"]
+
         Message = body["Message"]
-        MessageAttributes = body["MessageAttributes"]
         print("Subject", Subject)
         print("Message", Message)
         print("MessageAttributes", MessageAttributes)
