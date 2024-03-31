@@ -1,0 +1,19 @@
+{
+    "Topics": [
+        {
+            "TopicArn": "arn:aws:sns:us-east-1:167622690767:Test"
+        }
+    ],
+    "ResponseMetadata": {
+        "RequestId": "2ec3bb87-0e38-512f-aed6-e504179ac920",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "x-amzn-requestid": "2ec3bb87-0e38-512f-aed6-e504179ac920",
+            "date": "Sun, 31 Mar 2024 07:57:22 GMT",
+            "content-type": "text/xml",
+            "content-length": "369",
+            "connection": "keep-alive"
+        },
+        "RetryAttempts": 0
+    }
+}
